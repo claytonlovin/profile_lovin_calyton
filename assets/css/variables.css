@@ -1,0 +1,13 @@
+/* VARIABLES */
+:root {
+    
+    --box-shadow-pattern: 0 10px 20px rgba(0,0,0,.1);
+    --box-shadow-image: 5px 5px 25px 0 rgba(46,61,73,.2);
+    --animate-default: all 0.5s ease;
+    --border-radius: 3px;
+    /* TITLE RECORRENTE */
+    --color: #464646s;
+    --title-font-size: 30px;
+    --margin-title: 6rem 0 4rem 0;
+    --margin-title-resposive: 30px 10px 30px 10px;
+  }

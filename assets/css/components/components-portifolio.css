@@ -1,0 +1,38 @@
+.portifolio-card{
+    display: flex;
+    justify-content: center;;
+    width: 100%
+}
+
+section .portifolio{
+    margin: 5rem 0 5rem 0;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(12, 12, 12);
+    width: 100%;
+}
+.portifolio-img{
+    justify-content: center;
+    flex-direction: row;   
+}
+.portifolio img{
+    width: 355px;
+    cursor: pointer;
+}
+
+@media(max-width:608px){
+    section .portifolio{
+        height: 800px;
+    }
+    .portifolio-img{
+        display: flex;
+        flex-direction: column;
+    }
+    .portifolio img{
+        width: 255px;
+    }
+    
+}

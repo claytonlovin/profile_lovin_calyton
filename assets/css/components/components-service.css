@@ -1,0 +1,29 @@
+
+.service{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.service .service-img{
+    display:flex;
+    flex-direction: column;
+    padding: 0px 40px;
+    align-items: center;
+}
+.service img{
+    width: 60px;
+
+}
+.service p{
+    padding: 20px 0px;
+}
+
+@media(max-width:768px){
+    .service .service-img{
+        padding: 0 8px;
+    }
+    .service img{
+        width: 40px;
+    }
+}

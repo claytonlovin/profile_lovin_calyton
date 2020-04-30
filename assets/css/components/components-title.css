@@ -1,0 +1,28 @@
+.title-section{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.title-section h2, h3{
+    color: var(--color) ;
+    font-size: var(--title-font-size);
+    margin: 10px;
+    text-transform: uppercase;
+    line-height: 60px;
+}
+.title-section  h3{
+    color: var(--color) ;
+    font-size: var(--title-font-size);
+    margin: 10px;
+    text-transform: uppercase;
+    border-bottom: 5px solid #fff01c;
+    line-height: 60px;
+}
+.title-section span{
+    color: #fff01c;
+}
+@media(max-width:768px){
+    .title-section h2{
+        margin: var(--margin-title-resposive);
+    }
+}
