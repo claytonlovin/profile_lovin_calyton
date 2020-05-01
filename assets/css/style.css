@@ -1,14 +1,18 @@
-
-@import url('variables.css');
-@import url('components/components-intro.css');
-@import url('components/components-title.css');
-@import url('components/components-about.css');
-@import url('components/components-service.css');
-@import url('components/components-skills.css');
-@import url('components/components-portifolio.css');
-@import url('components/components-contact.css');
-@import url('components/components-footer.css');
-@import url('components/lightbox.min.css');
+/*Import google font*/
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:500&display=swap');
+/*RESET*/
+*{margin: 0; padding: 0; font-size: 100%; box-sizing: border-box; outline: none; font-family: 'Source Code Pro' , sans-serif;}
+nav, ul{list-style: none;}
+a{text-decoration: none; cursor: pointer; color: #fff;}
+body{
+	background-color: #f3f3f3b5;
+}
+::selection {
+    color: #c1881e;
+    background: transparent;
+}
+@import url('lightbox.min.css');
 
 /* COMPONENTS CARROSEL VISITED */
 
@@ -249,20 +253,6 @@
   }
 }
 
-/*Import google font*/
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:500&display=swap');
-/*RESET*/
-*{margin: 0; padding: 0; font-size: 100%; box-sizing: border-box; outline: none; font-family: 'Source Code Pro' , sans-serif;}
-nav, ul{list-style: none;}
-a{text-decoration: none; cursor: pointer; color: #fff;}
-body{
-	background-color: #f3f3f3b5;
-}
-::selection {
-    color: #c1881e;
-    background: transparent;
-}
 
 /*HEADER*/
 header{ 
@@ -433,7 +423,8 @@ header .menu-open{transform: translateX(-0%);}
 	color:#000;
 	text-transform: uppercase;
 	cursor: pointer;
-	font-size: 13px;
+  font-size: 13px;
+ 
 }
 .btn:hover{
 	background-color:#000;
@@ -450,8 +441,12 @@ header .menu-open{transform: translateX(-0%);}
 		width: 100%;
 	}
 	.hero .konsole-prompt{
-		width: 371px;
-		height: 100%;
+		width: 100%;
+    height: 100%;
+    background-image: none;
+    background-color: #000;
+    border-radius: 5px;
+    padding: 0;
 	}
 }
 
@@ -503,12 +498,22 @@ section .about{
   color: #464646;
 }
 @media(max-width:768px){
+  .about{
+    flex-direction: column;
+  }
+  .about .about-text{
+    width: 100% !important;
+    padding: 30px
+  }
+}
+@media(max-width:768px){
   section .about{
       margin: 20px 20px 20px 20px;
       flex-wrap: wrap;
   }
   .about img{
       margin: 0;
+      width: 310px !important;
   }
   .about .about-me{
       margin-top:10px; 
@@ -554,17 +559,27 @@ section .portifolio{
   cursor: pointer;
 }
 
-
 @media(max-width:608px){
   section .portifolio{
       height: 800px;
+      flex-direction: column;
+      margin: 10px;
+      padding: 10px;
+  }
+  .portifolio .port1 {
+    width: 100%;
+  }
+  .portifolio .port2{
+    width: 100%;
+    margin-left: 0;
+    margin-top: 40px;
+  }
+  .portifolio img{
+    width: 100%;
   }
   .portifolio-img{
       display: flex;
       flex-direction: column;
-  }
-  .portifolio img{
-      width: 255px;
   }
 }
 /*************************** SKILLS ***************************** */
@@ -592,6 +607,21 @@ text-align: justify;
 margin-top: 20px;
 line-height: 30px;
 }
+@media(max-width:768px){
+  section .skills{
+    flex-direction: column;
+    margin: 0;
+  }
+  .skills img{
+    width: 148px;
+  }
+  .skills div {
+    width: 100%;
+}
+.skills p{
+  padding: 10px;
+}
+}
 /* *****************************TITLE****************************** */
 .title-section{
   display: flex;
@@ -599,15 +629,15 @@ line-height: 30px;
   text-align: center;
 }
 .title-section h2, h3{
-  color: var(--color) ;
-  font-size: var(--title-font-size);
+  color: #464646;
+  font-size:30px;
   margin: 10px;
   text-transform: uppercase;
   line-height: 60px;
 }
 .title-section  h3{
-  color: var(--color) ;
-  font-size: var(--title-font-size);
+  color: #000000;
+  font-size: 30px;
   margin: 10px;
   text-transform: uppercase;
   border-bottom: 5px solid #fff01c;
@@ -618,7 +648,7 @@ line-height: 30px;
 }
 @media(max-width:768px){
   .title-section h2{
-      margin: var(--margin-title-resposive);
+      margin:30px 10px 30px 10px;;
   }
 }
 /* **********************FOOTER******************************* */

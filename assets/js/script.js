@@ -25,6 +25,19 @@ var whatlink = document.querySelector('.btn');
    window.open('https://api.whatsapp.com/send?l=pt&phone=5531996541296')
   })
 
+var post1 = document.querySelector('.port1');
+ post1.addEventListener('click', function(e){
+    e.preventDefault()
+
+   window.open('#')
+  })
+
+  var post2 = document.querySelector('.port2');
+  post2.addEventListener('click', function(e){
+     e.preventDefault()
+ 
+    window.open('#')
+   })
 // SCROOL
 
 $('nav a').click(function(e){
