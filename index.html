@@ -49,26 +49,10 @@
   <header>
     <nav role="navigation" >
       <div id="menuToggle">
-          <!--
-          A fake / hidden checkbox is used as click reciever,
-          so you can use the :checked selector on it.
-        -->
         <input type="checkbox" />
-
-          <!--
-          Some spans to act as a hamburger.
-          
-          They are acting like a real hamburger,
-          not that McDonalds stuff.
-        -->
         <span></span>
         <span></span>
         <span></span>
-
-          <!--
-          Too bad the menu has to be inside of the button
-          but hey, it's pure CSS magic.
-        -->
         <ul id="menu" >
           <a href="index.html"><li>Home</li></a>
           <a href="blog.html"><li>Blog</li></a>
@@ -85,7 +69,7 @@
           <p><strong>Hello</strong>, welcome I am ...</p>
           <h1>Clayton <strong>Silva</strong></h1>
           <p id="text"></p>
-          <button  class="btn">Vamos bater um papo</button>
+          <button  class="btn">let's chat</button>
         </div>
 
         <div class="konsole">
@@ -93,18 +77,20 @@
             <div >
               <div class="konsole-reserved">
                 <p>import  <img src="assets/img/konsole/user.svg"> as <span>pd</span></p>
-                <p>import  <img src="assets/img/konsole/user.svg"> as <span>np</span></p>
-                <p><span>df </span>= pd.read_csv('<strong>end.io/dats.csv</strong>')</p>
+                <p>import  <img src="assets/img/konsole/user.svg"> as <span>plt</span></p>
+                <p><span>df</span> = pd.read_csv('<strong>end.io/dats.csv</strong>')</p>
               </div>
               <div class="function">
-                <p>df(   <img src="assets/img/konsole/user.svg">    ) </p>
+                <p>df.head(   <img src="assets/img/konsole/user.svg">    ) </p>
                 <div>
-                 <p>df '<img src="assets/img/konsole/heart.svg">' ;<br>console.<strong>log</strong>('<img src="assets/img/konsole/party.svg"> <img src="assets/img/konsole/party.svg">')</p>
-                 <p><span>break;</span></p>
+                  <p><span>df.dtypes</span></p>
+                  <p>df.describe()</p>
+                 <p>df['<img src="assets/img/konsole/heart.svg">'].value_counts() <br>df.[<img src="assets/img/konsole/party.svg"> <img src="assets/img/konsole/party.svg">].plot.hist()</p>
+                 
                </div>
-               <p>default: </p>
+               
                <div class="function-default">
-                <p>console.<strong>log</strong>('<img src="assets/img/konsole/love.svg"> <img src="assets/img/konsole/love.svg"> <img src="assets/img/konsole/love.svg">')</p>
+                <p>df<strong>.to_csv</strong>("<img src="assets/img/konsole/love.svg"> <img src="assets/img/konsole/love.svg"> <img src="assets/img/konsole/love.svg">")</p>
 
               </div>
 
@@ -117,7 +103,7 @@
   </div>
 </section>
 <div class="title-section">
-  <h2>Quem é <span>{</span>Clayton <span>}</span></h2>
+  <h2>Who is  <span>__</span>Clayton<span>__</span></h2>
 </div>
 <style>
   .about{
@@ -153,10 +139,10 @@
       <img src="assets/img/about.png" alt="">
     </div>
     <div class="about-text">
-      <h1>Autodidatarismo</h1>
-      <p>Superei todos os desafios que a vida me impos atraves de esforçoa diários pela busca do conhecimento. <br>
-        Loucamente apaixonado em tecnologia, completamente viciado nessa arte de transformar dados em insights positivos.
-         Pai de uma criança linda e maravilhosa. A procura de uma oportunidade de estágio como cientista de dados.</p>
+      <h1>Self-taught</h1>
+      <p>I overcame all the challenges that life imposes on me through daily efforts to search for knowledge. <br>
+         Madly in love with technology, completely addicted to this art of turning data into positive insights. <br>
+         Father of a beautiful and wonderful child. Looking for an internship opportunity as a data scientist.</p>
     </div>
     
   </div>
@@ -166,58 +152,26 @@
 
 
 <div class="title-section">
-  <h3>Projetos</span></h3>
+  <h3>Project</span></h3>
 </div>
 
 <section>
   <div class="portifolio">
-    <div class="portifolio-img">
-      <a
-        href="assets/img/port.jpg"
-        class="js-smartPhoto"
-        data-group="animal"
-      >
-        <img src="assets/img/port.jpg" />
-      </a>
-      <a
-      href="assets/img/port.jpg"
-      class="js-smartPhoto"
-      data-group="animal"
-    >
-      <img src="assets/img/port.jpg" />
-    </a>
-    <a
-        href="assets/img/port.jpg"
-        class="js-smartPhoto"
-        data-group="animal"
-      >
-        <img src="assets/img/port.jpg" />
-      </a>
+
+    <div class="port1">
+        <img src="assets/img/post1.png" alt="">
+        <h1>Recommendation system with the Python suprise <br>library</h1>
+      <p>Uma biblioteca simples mas que possui  todos o recursos <br> para um  sistema de recomendações de produtos.</p>
     </div>
 
-    <!-- <div class="portifolio-img">
-      <a
-        href="assets/img/port.jpg"
-        class="js-smartPhoto"
-        data-group="animal"
-      >
-        <img src="assets/img/port.jpg" />
-      </a>
-      <a
-        href="assets/img/port.jpg"
-        class="js-smartPhoto"
-        data-group="animal"
-      >
-        <img src="assets/img/port.jpg" />
-      </a>
-      <a
-        href="assets/img/port.jpg"
-        class="js-smartPhoto"
-        data-group="animal"
-      >
-        <img src="assets/img/port.jpg" />
-      </a>
-    </div> -->
+    <div class="port2">
+      <img src="assets/img/post3.png" alt="">
+      <h1>Data Processing and Analysis <br>
+      Financial and Economic with R</h1>
+      <p>Foi utilizado a coleção de funções do pacote <br> R tidyverse para exploração e  manipulação dos dados.</p>
+  </div>
+   
+   
   </div>
 </section>
 
@@ -239,9 +193,8 @@
     </div>
     <div>
       
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
-         vero quod, dolorem nobis, veritatis perferendis quibusdam deserunt unde itaque sequi 
-        nesciunt? Alias fugit perspiciatis facilis harum reprehenderit modi corporis animi!</p>
+      <p>Data processing and analysis with python and apache spark. Exploratory analysis and dashboard creation
+         made easy with microsoft power bi. Adaptation of machine learning model with Pytoch python library</p>
     </div>
   </div>
 </section>
@@ -261,7 +214,7 @@
       </li>
     </ul>
     <div class="credict">
-        <p>Feito com <i class="fa fa-heart"></i>por clayton</p>
+        <p>Made with <i class="fa fa-heart"></i>by clayton</p>
     </div>
     
     <!-- </div> -->

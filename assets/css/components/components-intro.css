@@ -166,12 +166,6 @@ header .menu-open{transform: translateX(-0%);}
 .konsole-prompt .function strong{
 	color: #59d927 !important;
 }
-.konsole-prompt .function div span{
-	margin-left: 19px;
-}
-.konsole-prompt .function-default{
-	margin-left: 19px;
-}
 .konsole-prompt .function-default strong{
 	color: #59d927 !important;
 	margin: 0;
