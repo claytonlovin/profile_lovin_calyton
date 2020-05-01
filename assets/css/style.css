@@ -137,8 +137,6 @@ body{
   background: #000;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
   -webkit-transform-origin: 0% 0%;
   
           transform-origin: 0% 0%;
@@ -167,15 +165,12 @@ body{
           transform: none;
 }
 
-
-
 /*BLOG*/
   section .section-art{
     display: flex;
     flex-direction: row;
     padding: 60px 100px
   }
-
   .section-art .card{
       background-color: #ffffff;
       width: 35%;
@@ -195,7 +190,7 @@ body{
   }
   .card-titulo h1{
     font-size: 30px;
-    color: #404040;
+    color: #000000;
   }
   .card-titulo p{
     text-align: justify;
@@ -629,7 +624,7 @@ line-height: 30px;
   text-align: center;
 }
 .title-section h2, h3{
-  color: #464646;
+  color: #000000;
   font-size:30px;
   margin: 10px;
   text-transform: uppercase;
