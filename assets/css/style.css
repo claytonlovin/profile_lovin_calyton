@@ -248,3 +248,420 @@
       width: 80%;
   }
 }
+
+/*Import google font*/
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:500&display=swap');
+/*RESET*/
+*{margin: 0; padding: 0; font-size: 100%; box-sizing: border-box; outline: none; font-family: 'Source Code Pro' , sans-serif;}
+nav, ul{list-style: none;}
+a{text-decoration: none; cursor: pointer; color: #fff;}
+body{
+	background-color: #f3f3f3b5;
+}
+::selection {
+    color: #c1881e;
+    background: transparent;
+}
+
+/*HEADER*/
+header{ 
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	 position: absolute; 
+	 top: 0; 
+	 left: 0; 
+	 display: flex; 
+	 align-items: center;
+	padding: 30px 40px; 
+	
+}
+header nav {display: flex;} 
+header li a img{width: 30px;}
+
+
+header .menu-option{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(0, 0, 0);
+	width: 18%;
+	height: 100vh;
+	padding: 25px 50px; 
+	transform: translateX(-101%);
+	transition: transform 200ms linear;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+header .menu-option img{width: 30px;}
+header .menu-option li{color: #fff;padding: 10px 0;}
+header  .menu-close{margin-bottom: 20px;}
+header .menu-open{transform: translateX(-0%);}
+
+.menu-profile{
+	margin-top: 30px; 
+	bottom: 20px;
+	position: fixed;
+	flex-direction: row;
+}
+
+.menu-profile li a{
+	text-align: center;
+}
+.menu-profile .menu-btn-login {
+	background-color: rgb(255, 51, 102);
+	padding: 10px 30px;
+}
+.menu-profile .menu-btn-login:hover{
+	box-shadow: 0px 0px 16px -2px rgba(0,0,0,0.75);
+}
+
+@media(max-width:768px){
+	header{
+		padding: 19px 24px;
+	}
+}
+/*HERO*/
+.hero{
+	/* background-image: url('../../img/intro.svg'); */
+	background-size: cover;
+	background-position: center;
+	min-height: 114vh;  
+	z-index: -1;
+}
+.hero .hero-mask{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+}
+.hero .profile{
+	text-align: left;
+	position: absolute;
+	z-index: 0;
+	line-height: 50px;
+	flex-direction: row;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 70%;
+
+}
+@media(max-width: 425px){
+	.hero{
+		height: 160vh;
+	}
+	.hero .profile{
+		margin-top: 120px;
+	}
+}
+
+/*KONSOLE*/
+.hero .konsole-prompt{
+	display: flex;
+	justify-content: left;
+	padding: 61px 24px;
+	width: 396px;
+	height: 426px;
+	background-image: url('../img/kon.svg');
+	background-size: cover;
+	line-height: 30px;
+	text-align: left;
+}
+.hero .konsole{
+	animation: move 12s infinite;
+}
+@keyframes move {
+	from {margin-top: 0}
+	to {margin-bottom: 50px}
+}
+.hero .konsole-prompt{
+	animation-name: move;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+@keyframes move {
+    0% {top: 0px; bottom: 50px}
+    50% {top: 50px; bottom: 0px}
+    100%{top: 0px; bottom: 0px}
+ }
+.hero .konsole-prompt img{
+	width: 18px
+}
+.konsole-prompt p{
+	color: #d7cbcb  !important;
+	font-size: 16px !important;
+    font-family: 'Source Code Pro' !important;
+}
+
+.konsole-prompt .konsole-reserved span{
+	color: #cbd111;
+}
+.konsole-prompt strong{
+	color: #c1881e !important;
+	font-weight: lighter;
+}
+.konsole-prompt .function p{
+	color: #d7cbcb;
+}
+.konsole-prompt .function strong{
+	color: #59d927 !important;
+}
+.konsole-prompt .function-default strong{
+	color: #59d927 !important;
+	margin: 0;
+}
+/*.konsole-prompt .function p:first-child{
+	margin-left: 24px;
+}*/
+/**/
+.hero .profile p{margin-bottom: 5px; font-size: 22px; color: #000 }
+
+.hero h1{font-size: 2.5rem; text-transform: uppercase; color:#000}
+
+.btn{ 
+	padding: 19px 43px;
+	margin: 24px 0px;
+	background-color:#fff01c;
+	border: none;
+	border-radius: 5px;
+	color:#000;
+	text-transform: uppercase;
+	cursor: pointer;
+	font-size: 13px;
+}
+.btn:hover{
+	background-color:#000;
+	color: #fff;
+	transition: all 0.5s;
+	box-shadow: 0px 0px 30px 5px rgba(219,219,219,0,7);
+	border: none;
+}
+
+@media(max-width: 934px){
+	.hero .profile{
+		flex-direction: column;
+		text-align: center;
+		width: 100%;
+	}
+	.hero .konsole-prompt{
+		width: 371px;
+		height: 100%;
+	}
+}
+
+@media(max-width: 500px){
+	
+	.hero .profile button{
+		padding: 10px 24px;
+		margin-top: 13px;
+	}
+	.hero h1{font-size: 1.5rem;}
+	.hero .profile p{font-size: 13px; }
+
+	header .menu-option{
+		width: 100%;
+		padding: 19px 24px;
+	}
+}
+
+/* ABOUT */
+
+
+section .about{
+  display: flex;
+  justify-content: center;
+  margin: 20px 50px 20px 50px;
+}
+
+.about img{
+  width: 300px;
+  height: 350px;
+  margin-right: 50px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 30px 5px rgba (219,219,219,0,7);
+}
+.about .about-me{
+  width: 40%;
+  text-align: justify;
+}
+
+.about .about-me h2{
+  padding: 10px 0px;
+  font-size: 17px;
+}
+.about .about-me p{
+  line-height: 27px;
+  font-size: 15px;
+}
+.about .about-mep{
+  color: #464646;
+}
+@media(max-width:768px){
+  section .about{
+      margin: 20px 20px 20px 20px;
+      flex-wrap: wrap;
+  }
+  .about img{
+      margin: 0;
+  }
+  .about .about-me{
+      margin-top:10px; 
+      width: 100%;
+      padding: 0 0px;
+  }
+}
+/* **************************PROJECT ******************** */
+.portifolio-card{
+  display: flex;
+  justify-content: center;;
+  width: 100%
+}
+
+section .portifolio{
+  margin: 5rem 0 5rem 0;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+.portifolio  h1{
+  font-size: 20px;
+  margin-top: 10px;
+}
+.portifolio  p{
+  font-size: 16px;
+  margin-top: 10px;
+}
+.portifolio img{
+  -webkit-box-shadow: 0px 0px 29px -12px rgba(0,0,0,0.67);
+  -moz-box-shadow: 0px 0px 29px -12px rgba(0,0,0,0.67);
+  box-shadow: 0px 0px 29px -12px rgba(0,0,0,0.67);
+  border-radius: 5px;
+}
+.portifolio .port1 {
+  width: 600px;
+  cursor: pointer;
+}
+.portifolio .port2{
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+
+@media(max-width:608px){
+  section .portifolio{
+      height: 800px;
+  }
+  .portifolio-img{
+      display: flex;
+      flex-direction: column;
+  }
+  .portifolio img{
+      width: 255px;
+  }
+}
+/*************************** SKILLS ***************************** */
+section .skills {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5rem 10rem 0;
+}
+.skills div{
+width: 50%;
+}
+.skills img{
+width: 200px;
+padding: 30px;
+}
+
+.skills h1{
+font-size: 25px;
+text-transform: uppercase;
+}
+.skills p{
+font-size: 16px;
+text-align: justify;
+margin-top: 20px;
+line-height: 30px;
+}
+/* *****************************TITLE****************************** */
+.title-section{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.title-section h2, h3{
+  color: var(--color) ;
+  font-size: var(--title-font-size);
+  margin: 10px;
+  text-transform: uppercase;
+  line-height: 60px;
+}
+.title-section  h3{
+  color: var(--color) ;
+  font-size: var(--title-font-size);
+  margin: 10px;
+  text-transform: uppercase;
+  border-bottom: 5px solid #fff01c;
+  line-height: 60px;
+}
+.title-section span{
+  color: #fff01c;
+}
+@media(max-width:768px){
+  .title-section h2{
+      margin: var(--margin-title-resposive);
+  }
+}
+/* **********************FOOTER******************************* */
+footer { 
+  top: 0;
+  bottom: 0;
+  width: 100%;    
+  height: 100%;
+  padding: 77px 0;
+  
+  color: #000;
+  text-align: center;
+}
+footer a{ 
+  font-size: 14px;
+  color: #000;
+}
+footer a:hover{
+  color: #000;
+}
+
+footer ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;  
+  margin-top: 60px; 
+}
+footer li {list-style: none}
+footer i{font-size: 30px;margin: 10px; color: #000}
+footer i:hover{color: #000}
+@media(max-width:902px){
+  .footer .col{ margin: 20px; -webkit-transition: var(--animate-default);
+      transition: var(--animate-default)}
+}
+@media(max-width:689px){
+  footer .footer {
+      display: flex;
+      flex-direction: column;
+      margin-left: 50px;
+  }
+  .footer .col{ margin-left: 0; text-align: left}
+}
+footer .credict i{
+  color: red;
+  font-size: 12px
+}
