@@ -36,7 +36,7 @@ var post1 = document.querySelector('.port1');
   post2.addEventListener('click', function(e){
      e.preventDefault()
  
-    window.open('#')
+    window.open('file:///D:/github/profile_lovin_calyton/assets/base/student.html')
    })
 // SCROOL
 
